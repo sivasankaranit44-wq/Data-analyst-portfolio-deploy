@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sivasankaran | Data analyst</title>
+  <meta name="description" content="Portfolio of Sivasankaran, a junior data analyst who works with SQL Server, Python and Power BI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="logo" href="#top">Sivasankaran</a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero: who I am, plus a small "ask my data" card -->
+    <section class="wrap hero">
+      <div>
+        <h1>I turn messy data into answers that people can use.</h1>
+        <p class="lead">Hi, I’m Sivasankaran, aka Siva for short. I’m a junior data analyst. I work with SQL Server, Python and Power BI, and I spent years in sales, so I know which questions people actually ask.</p>
+        <div class="actions">
+          <a class="btn" href="#projects">See my projects</a>
+          <a class="btn btn--plain"  href="https://google.com&to=sivasankaranit44@gmail.com" target="_blank"> Email me</a>
+        </div>
+      </div>
+
+      <div class="ask">
+        <h2>Ask my data</h2>
+        <div class="ask-buttons">
+          <button type="button" data-answer="busiest" aria-pressed="true">When did the store sell the most in one day?</button>
+          <button type="button" data-answer="delivery" aria-pressed="false">Do orders arrive on time?</button>
+          <button type="button" data-answer="products" aria-pressed="false">Which products earn the most?</button>
+        </div>
+        <p class="answer" id="answer" aria-live="polite">On <mark>24 November 2017</mark> (Black Friday) the store took <mark>1,147 orders</mark> in a single day, about R$ 150,000 in sales. Earlier that month most days had 100 to 220 orders.</p>
+        <p class="source">From my Olist project: about 99,000 orders from a Brazilian online store, 2016 to 2018.</p>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap">
+        <h2>About me</h2>
+        <p>I spent several years in business development, keeping my own sales tracker in Excel and analysing results for my team. That taught me that a number only matters when someone can act on it.</p>
+        <p>Now I’m building the technical side: designing databases, writing SQL Server queries, cleaning data with Python and showing the results in Power BI. I also spent a summer as a penetration-testing intern, so I take care with how data is stored and who can reach it.</p>
+        <p>I’m looking for the role as a data analyst or SQL developer.</p>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="wrap">
+        <h2>What I work with</h2>
+        <dl class="skills">
+          <div>
+            <dt>Getting answers from data</dt>
+            <dd>SQL Server (T-SQL), Python with Pandas and NumPy, Excel pivot tables</dd>
+          </div>
+          <div>
+            <dt>Showing the answers</dt>
+            <dd>Power BI dashboards, charts with Matplotlib and Seaborn</dd>
+          </div>
+          <div>
+            <dt>Everyday tools</dt>
+            <dd>Git and GitHub, VS Code, SQL Server Management Studio</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="wrap">
+        <h2>Projects</h2>
+
+        <article class="project-main">
+          <h3>Online store sales pipeline</h3>
+          <p>I took nine raw files from a Brazilian online store, about 1.5 million rows in total, cleaned them step by step in SQL Server, and built a three-page Power BI dashboard on top.</p>
+          <ul class="finds">
+            <li>Sales jumped about 7 times on Black Friday 2017, then settled back the next month.</li>
+            <li>Health and beauty is the top earning category, ahead of watches and gifts.</li>
+            <li>Orders arrive well before the promised date: about 9 days in São Paulo, about 28 in the slowest state.</li>
+          </ul>
+          <p class="tools">Tools: SQL Server, Python, Power BI</p>
+          <p><a href="https://github.com/sivasankaranit44-wq/olist-sql-pipeline">Read the code and notes on GitHub</a></p>
+        </article>
+
+        <article class="project-main">
+          <h3>Bank transactions pipeline</h3>
+          <p>I took eight raw files from a real Czech bank, about 1.1 million rows in total, cleaned them step by step in SQL Server, checked the numbers at every step, and built a Power BI dashboard on top. Dates stored as text became real dates and Czech labels became English, with no rows or money lost along the way.</p>
+          <ul class="finds">
+            <li>About three quarters of all the money moved was cash deposits and cash withdrawals, far ahead of transfers.</li>
+            <li>76 of the 682 loans, about 11 percent, are bad: 31 finished without being fully paid and 45 are running in debt.</li>
+            <li>Activity grew fast in the first year: 177 transactions in January 1993 and 5,669 in December 1993, as more accounts opened.</li>
+          </ul>
+          <!-- Screenshot (put it above the tools line): <img src="images/berka_dashboard.png" alt="Bank dashboard showing monthly cashflow, operations, loan status and customers by age and gender"> -->
+          <p class="tools">Tools: SQL Server, Python, Power BI</p>
+          <p><a href="https://github.com/sivasankaranit44-wq/Berka-Banking-analytics">Read the code and notes on GitHub</a></p>
+        </article>
+
+        <article class="project-main">
+          <h3>Brew Invoice</h3>
+          <p>A web app that helps small businesses make invoices, built with React, Node.js, Express and MongoDB.</p>
+          <ul class="finds">
+            <li>Built end to end: a React front end, a Node.js and Express back end, and a MongoDB database.</li>
+            <li>Made for small shop owners who would otherwise write invoices by hand or in a spreadsheet.</li>
+            <!-- Add 1 or 2 real features here, for example how invoices are saved, edited or downloaded -->
+          </ul>
+          <p class="tools">Tools: React, Node.js, Express, MongoDB</p>
+          <!-- When the repo is public, add: <p><a href="YOUR-REPO-URL">Read the code and notes on GitHub</a></p> -->
+        </article>
+      </div>
+    </section>
+    <section class="section" id="contact">
+      <div class="wrap">
+        <h2>Say hello</h2>
+        <p>The quickest way to reach me is email. I’m happy to talk about data analyst roles, or just about numbers.</p>
+        <ul class="contact-links">
+          <li><a href="https://google.com&to=sivasankaranit44@gmail.com">sivasankaranit44@gmail.com</a></li>
+          <li><a href="https://github.com/sivasankaranit44-wq">GitHub</a></li>
+          <!-- TODO: replace # with your LinkedIn profile link -->
+          <li><a href="https://www.linkedin.com/in/sivasankaran-g">LinkedIn</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">© <span id="year"></span> Sivasankaran.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
